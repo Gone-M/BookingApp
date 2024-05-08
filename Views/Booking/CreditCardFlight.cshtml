@@ -1,0 +1,47 @@
+﻿@model booking.Models.CreditCardFlight
+
+@{
+    string airline = ViewBag.Airline;
+    string departureAirport = ViewBag.DepartureAirport;
+    string arrivalAirport = ViewBag.ArrivalAirport;
+    decimal price = ViewBag.Price;
+}
+
+<h1>Book Flight</h1>
+<h2>Flight Details</h2>
+<div>
+    <p>Airline: @airline</p>
+    <p>Departure Airport: @departureAirport</p>
+    <p>Arrival Airport: @arrivalAirport</p>
+    <p>Price: $@price</p>
+</div>
+
+<form method="post" action="@Url.Action("CreditCardFlight", "Booking")">
+
+    <input type="hidden" name="Airline" value="@airline" />
+    <input type="hidden" name="DepartureAirport" value="@departureAirport" />
+    <input type="hidden" name="ArrivalAirport" value="@arrivalAirport" />
+    <input type="hidden" name="Price" value="@price" />
+
+    <div class="form-group">
+        <label for="CardNumber">Card Number:</label>
+        <input type="text" class="form-control" id="CardNumber" name="CardNumber" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CardHolderName">Cardholder Name:</label>
+        <input type="text" class="form-control" id="CardHolderName" name="CardHolderName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ExpiryDate">Expiry Date:</label>
+        <input type="text" class="form-control" id="ExpiryDate" name="ExpiryDate" placeholder="MM/YY" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CVV">CVV:</label>
+        <input type="text" class="form-control" id="CVV" name="CVV" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

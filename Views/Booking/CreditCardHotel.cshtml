@@ -1,0 +1,48 @@
+﻿@model booking.Models.CreditCardHotel
+
+@{
+    ViewData["Title"] = "Book Hotel";
+    string hotelName = ViewBag.HotelName;
+    string location = ViewBag.Location;
+    decimal? pricePerNightNullable = ViewBag.PricePerNight as decimal?;
+    decimal pricePerNight = pricePerNightNullable.HasValue ? pricePerNightNullable.Value : 0.0m;
+}
+
+<h1>Book Hotel</h1>
+<h2>Hotel Details</h2>
+<div>
+    <p>Hotel Name: @ViewBag.HotelName</p>
+    <p>Location: @ViewBag.Location</p>
+    <p>Price per Night: $@ViewBag.PricePerNight</p>
+    <p>Check-in Date: @(ViewBag.CheckInDate != null ? ViewBag.CheckInDate.ToShortDateString() : "")</p>
+    <p>Check-out Date: @(ViewBag.CheckOutDate != null ? ViewBag.CheckOutDate.ToShortDateString() : "")</p>
+</div>
+
+<form method="post" action="@Url.Action("CreditCardHotel", "Booking")">
+    <input type="hidden" name="HotelName" value="@hotelName" />
+    <input type="hidden" name="HotelId" value="@ViewBag.HotelId" />
+    <input type="hidden" name="Location" value="@location" />
+    <input type="hidden" name="PricePerNight" value="@pricePerNight" />
+
+    <div class="form-group">
+        <label for="CardNumber">Card Number:</label>
+        <input type="text" class="form-control" id="CardNumber" name="CardNumber" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CardHolderName">Cardholder Name:</label>
+        <input type="text" class="form-control" id="CardHolderName" name="CardHolderName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ExpiryDate">Expiry Date:</label>
+        <input type="text" class="form-control" id="ExpiryDate" name="ExpiryDate" placeholder="MM/YY" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CVV">CVV:</label>
+        <input type="text" class="form-control" id="CVV" name="CVV" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

@@ -1,0 +1,44 @@
+﻿@model booking.Models.CreditCard
+
+@{
+    string carModel = ViewBag.CarModel;
+    string pickupLocation = ViewBag.PickupLocation;
+    decimal price = ViewBag.Price;
+}
+
+<h1>Rent Car</h1>
+<h2>Car Details</h2>
+<div>
+    <p>Car Model: @carModel</p>
+    <p>Pickup Location: @pickupLocation</p>
+    <p>Price: $@price</p>
+</div>
+
+<form method="post" action="@Url.Action("CreditCard", "Booking")">
+
+    <input type="hidden" name="CarModel" value="@carModel" />
+    <input type="hidden" name="PickupLocation" value="@pickupLocation" />
+    <input type="hidden" name="Price" value="@price" />
+
+    <div class="form-group">
+        <label for="CardNumber">Card Number:</label>
+        <input type="text" class="form-control" id="CardNumber" name="CardNumber" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CardHolderName">Cardholder Name:</label>
+        <input type="text" class="form-control" id="CardHolderName" name="CardHolderName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="ExpiryDate">Expiry Date:</label>
+        <input type="text" class="form-control" id="ExpiryDate" name="ExpiryDate" placeholder="MM/YY" required>
+    </div>
+
+    <div class="form-group">
+        <label for="CVV">CVV:</label>
+        <input type="text" class="form-control" id="CVV" name="CVV" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>

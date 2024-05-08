@@ -1,0 +1,173 @@
+﻿@using System.Linq
+@model List<booking.Models.Flight>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 4px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .ticket-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .ticket {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-header h3 {
+            margin: 0;
+        }
+
+        .detail {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="mb-0">Flight Search</h4>
+            </div>
+            <div class="card-body">
+                <form id="flightSearchForm">
+                    <div class="form-group">
+                        <label for="departureAirport">Departure Airport:</label>
+                        <select class="form-control" id="departureAirport" name="departureAirport" required>
+                            <option value="New York">New York</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Miami">Miami</option>
+                            <option value="Seattle">Seattle</option>
+                            <option value="Dallas">Dallas</option>
+                            <option value="Boston">Boston</option>
+                            <option value="Orlando">Orlando</option>
+                            <option value="Houston">Houston</option>
+                            <option value="Las Vegas">Las Vegas</option>
+                            <option value="Los Angeles">Los Angeles</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="arrivalAirport">Arrival Airport:</label>
+                        <select class="form-control" id="arrivalAirport" name="arrivalAirport" required>
+                            <option value="Los Angeles">Los Angeles</option>
+                            <option value="Houston">Houston</option>
+                            <option value="Denver">Denver</option>
+                            <option value="Atlanta">Atlanta</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Las Vegas">Las Vegas</option>
+                            <option value="Phoenix">Phoenix</option>
+                            <option value="New York">New York</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Seattle">Seattle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="departureDate">Departure Date:</label>
+                        <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Search Flights</button>
+                </form>
+                <div id="flightResults" class="mt-3"></div>
+            </div>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <h2 class="mt-5 mb-3">Search Results:</h2>
+            <div class="ticket-container">
+                @foreach (var flight in Model)
+                {
+                    <div class="ticket">
+                        <div class="ticket-header">
+                            <h3>@flight.Airline</h3>
+                            <div class="flight-info">
+                                <span class="departure">@flight.DepartureAirport</span>
+                                <span class="arrow">➔</span>
+                                <span class="arrival">@flight.ArrivalAirport</span>
+                            </div>
+                        </div>
+                        <div class="ticket-details">
+                            <div class="detail">
+                                <span class="label">Departure Time:</span>
+                                <span class="value">@flight.DepartureTime.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Arrival Time:</span>
+                                <span class="value">@flight.ArrivalTime.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Price:</span>
+                                <span class="value">@flight.Price.ToString("C")</span>
+                            </div>
+                        </div>
+                        <div class="buy-ticket">
+                            <a href="@Url.Action("CreditCardFlight", "Booking", new { flightId = flight.FlightId })" class="btn btn-primary">Buy Ticket</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="mt-5">No flights found.</p>
+        }
+    </div>
+</body>
+</html>

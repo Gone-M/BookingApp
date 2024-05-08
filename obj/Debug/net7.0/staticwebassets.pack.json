@@ -1,0 +1,337 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/obj/Debug/net7.0/scopedcss/projectbundle/booking.bundle.scp.css",
+      "PackagePath": "staticwebassets/booking.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/12photostory-8VL080SVHRs-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/12photostory-8VL080SVHRs-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/adobe-express-qr-code.png",
+      "PackagePath": "staticwebassets/Images/adobe-express-qr-code.png"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/alex-shutin-uhn-U0sSxFQ-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/alex-shutin-uhn-U0sSxFQ-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/alex-zarubi-bPbfaeNpEn4-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/alex-zarubi-bPbfaeNpEn4-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/anna-berdnik-0n0AHB1fgTQ-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/anna-berdnik-0n0AHB1fgTQ-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/anthony-delanoix-QAwciFlS1g4-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/anthony-delanoix-QAwciFlS1g4-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/blake-guidry-jXxdtXFEjcc-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/blake-guidry-jXxdtXFEjcc-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/caleb-miller-0Bs3et8FYyg-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/caleb-miller-0Bs3et8FYyg-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/coco.png",
+      "PackagePath": "staticwebassets/Images/coco.png"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/jeshoots-com-mSESwdMZr-A-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/jeshoots-com-mSESwdMZr-A-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/jet.png",
+      "PackagePath": "staticwebassets/Images/jet.png"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/louie-martinez-IocJwyqRv3M-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/louie-martinez-IocJwyqRv3M-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/marcin-nowak-iXqTqC-f6jI-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/marcin-nowak-iXqTqC-f6jI-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/nikola-ancevski-er7TM4GPqWg-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/nikola-ancevski-er7TM4GPqWg-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/philip-jahn-PYkpulrIMG0-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/philip-jahn-PYkpulrIMG0-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/plane.png",
+      "PackagePath": "staticwebassets/Images/plane.png"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/thomas-habr-6NmnrAJPq7M-unsplash.jpg",
+      "PackagePath": "staticwebassets/Images/thomas-habr-6NmnrAJPq7M-unsplash.jpg"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/Images/travel.png",
+      "PackagePath": "staticwebassets/Images/travel.png"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/cmetin/Projects/booking/booking/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.booking.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.booking.props",
+      "PackagePath": "build\\booking.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.booking.props",
+      "PackagePath": "buildMultiTargeting\\booking.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.booking.props",
+      "PackagePath": "buildTransitive\\booking.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

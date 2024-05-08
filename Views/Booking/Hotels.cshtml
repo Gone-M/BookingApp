@@ -1,0 +1,133 @@
+﻿@model List<booking.Models.Hotel>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Hotels</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hotel {
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-header {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: #f8f9fa;
+        }
+
+        .hotel-details {
+            padding: 15px;
+        }
+
+        .detail {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .btn-book {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .btn-book:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Search Hotels</h1>
+        <form method="get">
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <select class="form-control" id="location" name="location" required>
+                    @foreach (var location in ViewBag.Locations)
+                    {
+                        <option value="@location">@location</option>
+                    }
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="checkInDate">Check-in Date:</label>
+                    <input type="date" class="form-control" id="checkInDate" name="checkInDate" required>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="checkOutDate">Check-out Date:</label>
+                    <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" required>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Search Hotels</button>
+        </form>
+
+        @if (Model != null && Model.Any())
+        {
+            <h2 class="mt-5 mb-4">Search Results:</h2>
+            <div class="hotel-container">
+                @foreach (var hotel in Model)
+                {
+                    <div class="hotel">
+                        <div class="hotel-header">
+                            <h3>@hotel.HotelName</h3>
+                            <div class="hotel-info">
+                                <span class="location">@hotel.Location</span>
+                            </div>
+                        </div>
+                        <div class="hotel-details">
+                            <div class="detail">
+                                <span class="label">Price per Night:</span>
+                                <span class="value">$@hotel.PricePerNight.ToString("0.##")</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Availability:</span>
+                                <span class="value">@((hotel.Availability) ? "Available" : "Not Available")</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Rating:</span>
+                                <span class="value">@hotel.Rating</span>
+                            </div>
+                            <div class="detail buy-ticket">
+                                <a href="@Url.Action("CreditCardHotel", "Booking", new { hotelId = hotel.HotelId })" class="btn btn-book">Book now</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p class="mt-5">No hotels found.</p>
+        }
+    </div>
+</body>
+</html>

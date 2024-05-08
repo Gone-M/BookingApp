@@ -1,0 +1,158 @@
+﻿@model List<booking.Models.Car>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Cars</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 8px 8px 0 0;
+            padding: 10px 20px;
+        }
+
+        .card-body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+            border-radius: 4px;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+                border-color: #0056b3;
+            }
+
+        .car-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .ticket {
+            width: 48%;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .ticket-header h3 {
+            margin: 0;
+        }
+
+        .flight-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .departure {
+            margin-right: 5px;
+        }
+
+        .detail {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .value {
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="mb-0">Search Cars</h1>
+            </div>
+            <div class="card-body">
+                <form method="get">
+                    <div class="form-group">
+                        <label for="pickupLocation">Pickup Location:</label>
+                        <select class="form-control" id="pickupLocation" name="pickupLocation" required>
+                            @foreach (var location in ViewBag.PickupLocations)
+                            {
+                                <option value="@location">@location</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date:</label>
+                        <input type="date" class="form-control" id="pickupDate" name="pickupDate" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Search Cars</button>
+                </form>
+            </div>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <h2 class="mt-4 mb-3">Search Results:</h2>
+            <div class="car-container">
+                @foreach (var car in Model)
+                {
+                    <div class="ticket">
+                        <div class="ticket-header">
+                            <h3>@car.CarModel</h3>
+                            <div class="flight-info">
+                                <span class="departure">@car.RentalCompany</span>
+                            </div>
+                        </div>
+                        <div class="ticket-details">
+                            <div class="detail">
+                                <span class="label">Price:</span>
+                                <span class="value">$@car.Price.ToString("0.##")</span>
+                            </div>
+                            <div class="detail">
+                                <span class="label">Availability:</span>
+                                <span class="value">@((car.Availability) ? "Available" : "Not Available")</span>
+                            </div>
+                            <div class="rent-now">
+                                <a href="@Url.Action("CreditCard", "Booking", new { carId = car.CarId })" class="btn btn-primary">Rent Now</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <p>No cars found.</p>
+        }
+    </div>
+</body>
+</html>

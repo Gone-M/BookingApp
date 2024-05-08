@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">Basic Information</h4>
+                        <form action="/Pages/EditBasicInformation" method="post">
+                            @Html.AntiForgeryToken()
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" value="civan">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" value="metin">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password *</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                            </div>
+                            <hr>
+                            <h4 class="card-title text-center">About You</h4>
+                            <div class="form-group">
+                                <label for="bio">Bio</label>
+                                <textarea class="form-control" id="bio" name="bio" rows="4"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="datepicker"></label>
+                                <input type="date" class="form-control" id="datepicker" name="datepicker">
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select class="form-control" id="gender" name="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="unspecified">Unspecified (X)</option>
+                                    <option value="undisclosed">Undisclosed (U)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<style>
+    .card {
+        border: none;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-title {
+        margin-bottom: 20px;
+    }
+</style>

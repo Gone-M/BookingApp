@@ -1,0 +1,449 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* Search container starts *@
+@*<div class="container" id="container">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active nav-link-custom" aria-current="page" href="#">Hotel</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#">Flights</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#">Cars</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-custom" href="#">Packages</a>
+        </li>
+    </ul>
+
+    <div class="container mt-2" id="container-labels">
+        <div class="row center" id="margin-container">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="datepicker"></label>
+                    <input type="date" class="form-control" id="datepicker" name="datepicker">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="city"></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: none;"><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <input type="text" class="form-control" id="location" name="location" placeholder="Enter location">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label for="people"></label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" style="border-top-right-radius: 0; border-bottom-right-radius: 0; border-right: none;"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input type="number" class="form-control" id="people" name="people" min="1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary" style="margin-top: 24px;" onclick="redirectToAirplaneTicket()">Search</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+@* Search container ends *@
+
+
+@* Analysis of travel starts *@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12 text-center">
+            <img src="~/Images/travel.png" class="img-fluid mx-auto d-block" alt="travel" style="max-width: 1200px; width:100%; margin-top: 50px; border-radius: 10px;">
+        </div>
+    </div>
+</div>
+
+<div class="container" style="max-width: 1230px; margin-top: 50px">
+    <h2 style="padding-bottom: 20px">The most visited cities in the world in 2024</h2>
+    <div class="progress-container mb-3">
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 90%"></div>
+        </div>
+        <p>London, UK</p>
+    </div>
+    <div class="progress-container mb-3">
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 80%"></div>
+        </div>
+        <p>Paris, France</p>
+    </div>
+    <div class="progress-container mb-3">
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 65%"></div>
+        </div>
+        <p>New York City, US</p>
+    </div>
+    <div class="progress-container mb-3">
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 55%"></div>
+        </div>
+        <p>Tokyo, Japan</p>
+    </div>
+    <div class="progress-container mb-3">
+        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 40%"></div>
+        </div>
+        <p>Singapore</p>
+    </div>
+</div>
+@* Analysis of travel ends *@
+
+@* Slide container starts *@
+<div class="container" style="max-width: 1230px; margin-top: 50px; position: relative;">
+    <h2 style="padding-bottom: 20px">Explore stays in trending destinations</h2>
+    <div class="scrollable-container">
+        <div class="scrollable-content">
+            <div class="container-item">
+                <img src="~/Images/alex-zarubi-bPbfaeNpEn4-unsplash.jpg" alt="Image 1">
+                <div class="info">Moscow<br /><span style=" font-size:12px;">Russia</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/thomas-habr-6NmnrAJPq7M-unsplash.jpg" alt="Image 2">
+                <div class="info">New York<br /><span style=" font-size:12px;">USA</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/louie-martinez-IocJwyqRv3M-unsplash.jpg" alt="Image 3">
+                <div class="info">Tokyo<br /><span style=" font-size:12px;">Japan</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/anna-berdnik-0n0AHB1fgTQ-unsplash.jpg" alt="Image 4">
+                <div class="info">Istanbul<br /><span style=" font-size:12px;">Turkey</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/marcin-nowak-iXqTqC-f6jI-unsplash.jpg" alt="Image 5">
+                <div class="info">London<br /><span style=" font-size:12px;">England</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/anthony-delanoix-QAwciFlS1g4-unsplash.jpg" alt="Image 6">
+                <div class="info">Paris<br /><span style=" font-size:12px;">France</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/alex-shutin-uhn-U0sSxFQ-unsplash.jpg" alt="Image 7">
+                <div class="info">Toronto<br /><span style=" font-size:12px;">Canada</span></div>
+            </div>
+            <div class="container-item">
+                <img src="~/Images/caleb-miller-0Bs3et8FYyg-unsplash.jpg" alt="Image 8">
+                <div class="info">Rome<br /><span style=" font-size:12px;">Italy</span></div>
+            </div>
+        </div>
+    </div>
+    <button class="scroll-button left-button" onclick="scrollToLeft()">&#8249;</button>
+    <button class="scroll-button right-button" onclick="scrollRight()">&#8250;</button>
+</div>
+@* Slide container ends *@
+
+@* Grap opportunities starts*@
+<div class="container" style="max-width: 1229px;">
+    <h2 style="max-width: 1200px; margin-bottom: -25px; margin-top: 40px;">Grab the opportunities</h2>
+    <div class="container position-relative" id="cover-img">
+        <img src="~/Images/nikola-ancevski-er7TM4GPqWg-unsplash.jpg" />
+        <div class="overlay"></div>
+        <div class="text-container">
+            <div class="text">We connect you with the world</div>
+            <button class="btn btn-primary" id="btn-connect">Learn More</button>
+        </div>
+    </div>
+</div>
+@* Grap opportunities ends *@
+
+
+<div class="container" id="2-columns-container" style="max-width: 1230px; margin-top: 50px;">
+    <h2 style="margin-bottom:30px;">Check your passport eligiblity</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <a href="https://visaindex.com/">
+                <div class="image-column">
+                    <img src="~/Images/blake-guidry-jXxdtXFEjcc-unsplash.jpg" alt="Image 1">
+                </div>
+            </a>
+            <div class="info-image-2">
+                <h3>Check passport index</h3>
+                <p>You can check passport index all around the world.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <a href="https://www.narcity.com/canada-travel-news-you-may-have-missed">
+                <div class="image-column">
+                    <img src="~/Images/12photostory-8VL080SVHRs-unsplash.jpg" alt="Image 2">
+                </div>
+            </a>
+            <div class="info-image-2">
+                <h3>Travel News</h3>
+                <p>Latest Canadian travel news.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" style="max-width: 1200px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg, #0084ff, #3b5998, #00af5b); margin-top: 50px; padding: 80px;">
+    <h2 style="color: #fff">We create great opportunities to get to know our current world before going to Mars.</h2>
+    <button class="btn btn-primary" id="btn-world">Learn More</button>
+</div>
+
+
+
+
+<style>
+
+    #btn-world {
+        background-color: #FFA500;
+        padding: 8px 16px;
+    }
+
+        #btn-world:hover {
+            background-color: #FFD700;
+        }
+
+    #2-columns-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .image-column img {
+        width: 100%;
+        height: 320px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .info-image-2 {
+        padding: 0px 0;
+    }
+
+    .info h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .info p {
+        font-size: 14px;
+    }
+</style>
+
+
+<style>
+    /* Grap opportunities CSS starts */
+
+    #cover-img {
+        position: relative;
+        margin-top: 50px;
+        max-width: 1209px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        padding: 0px;
+    }
+
+        #cover-img img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        color: white;
+        font-size: 24px;
+        margin-right: 20px;
+    }
+
+    #btn-connect {
+        padding: 10px 20px;
+    }
+
+    /* Grap opportunities CSS ends */
+</style>
+
+<style>
+    /* Slide container CSS starts*/
+
+    .container-item {
+        display: inline-block;
+        width: 270px;
+        height: 220px;
+        margin-right: 10px;
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+        .container-item img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+
+    .info {
+        text-align: left;
+        background-color: white;
+        padding: 10px;
+        margin-top: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .scrollable-container::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .scrollable-container {
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+    }
+
+    .scroll-button {
+        background-color: #fff;
+        border: none;
+        font-size: 23px;
+        color: #007bff;
+        cursor: pointer;
+        padding: 0;
+        width: 35px;
+        height: 35px;
+        z-index: 999;
+        position: absolute;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .left-button {
+        left: -5px;
+        bottom: 28%;
+        transform: translateY(-50%);
+    }
+
+    .right-button {
+        right: -5px;
+        bottom: 28%;
+        transform: translateY(-50%);
+    }
+
+    /* Slide container CSS ends*/
+</style>
+
+<style>
+    /* Search container CSS starts*/
+
+    #margin-container {
+        margin-top: -35px;
+    }
+
+    #container-labels {
+        padding: 30px;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+    }
+
+    .flex-container {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #container-inputs {
+        padding: 40px;
+    }
+
+    .custom-placeholder {
+        padding: 0;
+    }
+
+    .nav {
+        border-bottom: 1px solid #ccc;
+    }
+
+    .input-group-text {
+        background-color: white;
+        padding: 10px;
+    }
+
+    #outside-container {
+        border: 1px solid #ccc;
+    }
+
+    .nav-link-custom {
+        color: black;
+        font-size: 14px;
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+        .nav-link-custom::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #41424a;
+            visibility: hidden;
+            transition: visibility 0s, width 0.3s;
+        }
+
+        .nav-link-custom:hover::after,
+        .nav-link-custom:focus::after {
+            visibility: visible;
+        }
+
+    #container {
+        margin-top: 50px;
+        border: 1px solid #ccc;
+        max-width: 1200px;
+        border-radius: 10px;
+        padding: 0px;
+    }
+
+    /* Search container CSS ends*/
+</style>

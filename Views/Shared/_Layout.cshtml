@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - booking</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/booking.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <div class="container-fluid bg-white box-shadow p-0">
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white box-shadow mb-3">
+                <div class="container-lg" style="max-width: 1220px;">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/Images/coco.png" height="30px" width="30px" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                        <ul class="navbar-nav flex-grow-1 justify-content-end custom-nav">
+                            <li class="nav-item" style="padding: 0 10px;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index" style="font-size: 14px">Home</a>
+                            </li>
+                            @*<li class="nav-item" style="padding: 0 10px;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy" style="font-size: 14px">Privacy</a>
+                            </li>*@
+                            @*<li class="nav-item" style="padding: 0 10px;">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="English" style="font-size: 14px"><i class="fas fa-globe"></i> English</a>
+                            </li>*@
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Cars" style="font-size: 14px">Cars</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Flights" style="font-size: 14px">Flights</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Booking" asp-action="Hotels" style="font-size: 14px">Hotels</a>
+                            </li>
+                        </ul>
+
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <div class="btn-group">
+                                <button class="btn btn-link nav-link text-dark" style="font-size: 14px" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fas fa-user"></i> @User.Identity.Name
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Account">Account</a>
+                                    </li>
+                                    <li>
+                                        <form id="logoutForm" asp-controller="Home" asp-action="Logout" method="post" class="form-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-link nav-link text-dark" style="font-size: 14px">
+                                                <i class="fas fa-sign-out-alt"></i> Sign out
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="btn-group" style="padding: 0 10px;">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="btn">
+                                    Create an account
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item keychainify-checked" asp-action="Signin">Sign in</a></li>
+                                    <li><a class="dropdown-item keychainify-checked" asp-action="Privacy">Privacy</a></li>
+                                    @*<li><a class="dropdown-item keychainify-checked" href="#">Something else here</a></li>*@
+                                </ul>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="margin-bottom: -60px; font-size: 12px;">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="~/Images/coco.png" height="20px" width="20px" /> CCK Agent.
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <h6 class="text-uppercase fw-bold mb-4" style="font-size: 13px; color: black;">
+                            Products
+                        </h6>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Angular</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">React</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Vue</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Laravel</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+                        <h6 class="text-uppercase fw-bold mb-4" style="font-size: 13px; color: black;">
+                            Useful links
+                        </h6>
+                        <p style="color: #2e76e8; list-style-type: none;">
+                            <a href="#!" class="text-reset">Pricing</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Settings</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Orders</a>
+                        </p>
+                        <p style="color: #2e76e8;">
+                            <a href="#!" class="text-reset">Help</a>
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4" style="font-size: 13px; color: black;">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Toronto, ON 12657, CANADA</p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            civan.metin@georgebrown.ca
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> + 1 111 111 11</p>
+                        <p><i class="fas fa-print me-3"></i> + 1 111 111 11</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="text-center p-4">
+            &#xa9; 2024 Copyright:
+            <a class="text-reset fw-bold" href="">Civan Metin</a>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
